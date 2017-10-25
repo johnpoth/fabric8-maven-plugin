@@ -1,0 +1,6 @@
+metadata:
+  name: fabric8-maven-sample-spring-boot-jdk-9
+spec:
+  to:
+    kind: Service
+    name: fabric8-maven-sample-spring-boot-jdk-9

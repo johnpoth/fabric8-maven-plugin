@@ -19,7 +19,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fabric8-maven-sample-spring-boot</artifactId>
+    <artifactId>fabric8-maven-sample-spring-boot-jdk-9</artifactId>
     <groupId>io.fabric8</groupId>
     <version>3.5-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -80,7 +80,15 @@
                 <version>3.5-SNAPSHOT</version>
 
                 <configuration>
-
+                    <!--<images>-->
+                        <!--<image>-->
+                            <!--Use -Dfabric8.generator.from=jpoth/openjdk-9-fabric8-s2i-jboss:2.0.2 when building instead-->
+                            <!--<name>fabric8-maven-sample-spring-boot-jdk-9</name>-->
+                            <!--<build>-->
+                                <!--<from>jpoth/openjdk-9-fabric8-s2i-jboss:2.0.2</from>-->
+                            <!--</build>-->
+                        <!--</image>-->
+                    <!--</images>-->
                     <resources>
                         <labels>
                             <all>
@@ -122,6 +130,11 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+            </plugin>
         </plugins>
     </build>
 
